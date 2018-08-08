@@ -10,11 +10,15 @@ import UIKit
 
 class AddItemViewController: UITableViewController {
 
+    @IBOutlet weak var textField: UITextField!
+    
+    
 @IBAction func cancel() {
     navigationController?.popViewController(animated: true)
     }
     
 @IBAction func done() {
+     print("Contents of the text field: \(textField.text!)")
     navigationController?.popViewController(animated: true)
     }
     
