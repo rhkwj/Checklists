@@ -60,7 +60,6 @@
                     <navigationItem key="navigationItem" title="Checklists" id="jva-5Q-xFg">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="jJU-st-tun">
                             <connections>
-                                <action selector="addItem" destination="BHm-wT-oQp" id="Fvp-9z-6Ks"/>
                                 <segue destination="73G-7I-WyR" kind="show" id="uvj-cr-N5v"/>
                             </connections>
                         </barButtonItem>
@@ -70,7 +69,7 @@
             </objects>
             <point key="canvasLocation" x="1920.8" y="133.5832083958021"/>
         </scene>
-        <!--Table View Controller-->
+        <!--Add Item-->
         <scene sceneID="3w6-5x-X50">
             <objects>
                 <tableViewController id="73G-7I-WyR" sceneMemberID="viewController">
@@ -93,6 +92,10 @@
                             <outlet property="delegate" destination="73G-7I-WyR" id="Zk0-Tu-SOX"/>
                         </connections>
                     </tableView>
+                    <navigationItem key="navigationItem" title="Add Item" id="YDA-eS-zc7">
+                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="A8n-T7-aFF"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="done" id="nfK-IF-D2X"/>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eYT-Xp-ZDz" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
