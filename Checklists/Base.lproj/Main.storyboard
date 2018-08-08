@@ -23,6 +23,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="-623" y="125"/>
         </scene>
         <!--Checklists-->
         <scene sceneID="wCF-pl-ejh">
@@ -57,7 +58,11 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Checklists" id="jva-5Q-xFg">
-                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="jJU-st-tun"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="jJU-st-tun">
+                            <connections>
+                                <action selector="addItem" destination="BHm-wT-oQp" id="Fvp-9z-6Ks"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Nad-f7-5Ic" userLabel="First Responder" sceneMemberID="firstResponder"/>
