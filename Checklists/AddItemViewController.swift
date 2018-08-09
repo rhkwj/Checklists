@@ -9,7 +9,7 @@
 import UIKit
 
 class AddItemViewController: UITableViewController {
-
+    
 @IBOutlet weak var textField: UITextField!
     
     
@@ -21,8 +21,8 @@ class AddItemViewController: UITableViewController {
     }
     
 @IBAction func done() {
-    print("Contents of the text field: \(textField.text!)")
-    dismiss(animated: true,completion: nil)
+    let item = ChecklistItem()
+    item.text = textField.text!
     
     //navigationController?.popViewController(animated: true)
     }
