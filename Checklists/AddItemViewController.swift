@@ -46,7 +46,6 @@ class AddItemViewController: UITableViewController, UITextFieldDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         navigationItem.largeTitleDisplayMode = .never
-        textField.delegate = self
     }
 
 

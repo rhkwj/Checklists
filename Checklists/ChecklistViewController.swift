@@ -16,12 +16,16 @@ class ChecklistViewController: UITableViewController, AddItemViewControllerDeleg
         navigationController?.popViewController(animated:true)
     }
     
-    func addItemViewController(_ controller: AddItemViewController, didFinishAdding item: ChecklistItem) {
+    func addItemViewController(
+        _ controller: AddItemViewController,
+        didFinishAdding item: ChecklistItem) {
+        let newRowIndex = items.count
+        items.append(item)
+        let indexPath = IndexPath(row: newRowIndex, section: 0)
+        let indexPaths = [indexPath]
+        tableView.insertRows(at: indexPaths, with: .automatic)
         navigationController?.popViewController(animated:true)
     }
-    
-    
-    
     
     required init?(coder aDecoder: NSCoder) {
         items = [ChecklistItem]()
