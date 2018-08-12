@@ -152,6 +152,15 @@ class ChecklistViewController: UITableViewController, AddItemViewControllerDeleg
         let label = cell.viewWithTag(1000) as! UILabel
         label.text = item.text
     }
+    
+    func documentsDirectory() -> URL {
+        let paths = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)
+        return paths[0]
+    }
+    
+    func dataFilePath() -> URL {
+        return documentsDirectory().appendingPathComponent("Checklists.plist")
+    }
 }
 
 
