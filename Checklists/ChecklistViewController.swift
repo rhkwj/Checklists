@@ -12,10 +12,7 @@ class ChecklistViewController: UITableViewController, AddItemViewControllerDeleg
     
     var items: [ChecklistItem]
 
-    func addItemViewControllerDidCancel(_ controller: AddItemViewController) {
-        navigationController?.popViewController(animated:true)
-    }
-    
+    // delegate functions
     func addItemViewController(
         _ controller: AddItemViewController,
         didFinishAdding item: ChecklistItem) {
@@ -24,6 +21,21 @@ class ChecklistViewController: UITableViewController, AddItemViewControllerDeleg
         let indexPath = IndexPath(row: newRowIndex, section: 0)
         let indexPaths = [indexPath]
         tableView.insertRows(at: indexPaths, with: .automatic)
+        navigationController?.popViewController(animated:true)
+    }
+    
+    func addItemViewControllerDidCancel(_ controller: AddItemViewController) {
+        navigationController?.popViewController(animated:true)
+    }
+    
+    func addItemViewController(_ controller: AddItemViewController,
+                               didFinishEditing item: ChecklistItem) {
+        if let index = items.index(of: item) {
+            let indexPath = IndexPath(row: index, section: 0)
+            if let cell = tableView.cellForRow(at: indexPath) {
+                configureText(for: cell, with: item)
+            }
+        }
         navigationController?.popViewController(animated:true)
     }
     
