@@ -68,6 +68,10 @@ class ChecklistViewController: UITableViewController, AddItemViewControllerDeleg
         items.append(row4item)
         
         super.init(coder: aDecoder)
+        
+        print("Documents folder is \(documentsDirectory())")
+        print("Data file path is \(dataFilePath())")
+
     }
     
     override func viewDidLoad() {
