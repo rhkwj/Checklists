@@ -79,10 +79,10 @@
             </objects>
             <point key="canvasLocation" x="1920.8" y="133.5832083958021"/>
         </scene>
-        <!--Table View Controller-->
+        <!--All Lists-->
         <scene sceneID="Y98-5E-cg2">
             <objects>
-                <tableViewController id="x4j-hI-jG8" sceneMemberID="viewController">
+                <tableViewController id="x4j-hI-jG8" userLabel="All Lists" customClass="AllListsViewController" customModule="Checklists" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="5C9-kd-k5z">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -102,7 +102,7 @@
                             <outlet property="delegate" destination="x4j-hI-jG8" id="XSe-RP-war"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="4nt-lN-GlT"/>
+                    <navigationItem key="navigationItem" title="Checklists" id="4nt-lN-GlT"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eAi-Em-7fI" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
