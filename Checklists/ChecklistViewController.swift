@@ -162,6 +162,19 @@ class ChecklistViewController: UITableViewController, ItemDetailViewControllerDe
             print("Error encoding item array!")
         }
     }
+    
+    func loadChecklistItems() {
+        let path = dataFilePath()
+        if let data = try? Data(contentsOf: path) {
+            let decoder = PropertyListDecoder()
+            do {
+                items = try decoder.decode([ChecklistItem].self, from: data)
+            } catch {
+                print("Error decoding item array!")
+            }
+        }
+    }
 }
+
 
 
