@@ -13,6 +13,15 @@ class ChecklistViewController: UITableViewController, ItemDetailViewControllerDe
 //    var items: [ChecklistItem]
     var items = [ChecklistItem]()
     
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        // Enable large titles
+        navigationController?.navigationBar.prefersLargeTitles = true
+        // Load items
+        loadChecklistItems()
+    }
+
+    
     func itemDetailViewController(_ controller: ItemDetailViewController, didFinishAdding item: ChecklistItem) {
         let newRowIndex = items.count
         items.append(item)
@@ -74,12 +83,6 @@ class ChecklistViewController: UITableViewController, ItemDetailViewControllerDe
 
     }
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        
-        navigationController?.navigationBar.prefersLargeTitles = true
-        // Do any additional setup after loading the view, typically from a nib.
-    }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "AddItem" {
