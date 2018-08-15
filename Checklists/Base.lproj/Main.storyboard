@@ -121,12 +121,12 @@
                     </tableView>
                     <toolbarItems/>
                     <navigationItem key="navigationItem" title="Add Checklist" largeTitleDisplayMode="never" id="2tT-1C-KTc">
-                        <barButtonItem key="leftBarButtonItem" enabled="NO" systemItem="cancel" id="oAk-FN-Vhd">
+                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="oAk-FN-Vhd">
                             <connections>
                                 <action selector="cancel" destination="L0D-cK-Ga5" id="bnD-iv-c5O"/>
                             </connections>
                         </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" enabled="NO" systemItem="done" id="QdV-pf-ADY">
+                        <barButtonItem key="rightBarButtonItem" systemItem="done" id="QdV-pf-ADY">
                             <connections>
                                 <action selector="done" destination="L0D-cK-Ga5" id="vNH-gQ-DAv"/>
                             </connections>
@@ -251,7 +251,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="qQL-GV-goJ"/>
+        <segue reference="vUs-wk-WUX"/>
         <segue reference="SfH-yK-jcM"/>
     </inferredMetricsTieBreakers>
 </document>
