@@ -11,17 +11,19 @@ import UIKit
 class ChecklistViewController: UITableViewController, ItemDetailViewControllerDelegate {
     
 //    var items: [ChecklistItem]
+    var checklist: Checklist!
     var items = [ChecklistItem]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        print("Document folder: \(documentsDirectory())")
         // Disable large titles for this view controller
         navigationItem.largeTitleDisplayMode = .never
-    
         // Load items
         loadChecklistItems()
+        title = checklist.name
     }
+
 
     
     func itemDetailViewController(_ controller: ItemDetailViewController, didFinishAdding item: ChecklistItem) {

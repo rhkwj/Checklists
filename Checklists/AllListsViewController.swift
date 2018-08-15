@@ -52,8 +52,12 @@ class AllListsViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = makeCell(for: tableView)
-        cell.textLabel!.text = "List \(indexPath.row)"
+        // Update cell informaiton
+        let checklist = lists[indexPath.row]
+        cell.textLabel!.text = checklist.name
+        cell.accessoryType = .detailDisclosureButton
         return cell
+        
     }
     
     override func tableView(_ tableView: UITableView,
