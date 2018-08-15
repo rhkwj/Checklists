@@ -16,6 +16,7 @@
 		92B1EC8021192DD300CDB422 /* ChecklistItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92B1EC7F21192DD300CDB422 /* ChecklistItem.swift */; };
 		92E35F0E21228B3D008963DD /* AllListsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92E35F0D21228B3D008963DD /* AllListsViewController.swift */; };
 		92E35F102123BE63008963DD /* Checklist.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92E35F0F2123BE63008963DD /* Checklist.swift */; };
+		92E35F122123D446008963DD /* ListDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92E35F112123D446008963DD /* ListDetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		92B1EC7F21192DD300CDB422 /* ChecklistItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChecklistItem.swift; sourceTree = "<group>"; };
 		92E35F0D21228B3D008963DD /* AllListsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllListsViewController.swift; sourceTree = "<group>"; };
 		92E35F0F2123BE63008963DD /* Checklist.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Checklist.swift; sourceTree = "<group>"; };
+		92E35F112123D446008963DD /* ListDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListDetailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,6 +67,7 @@
 				92758FD12116DAE9004B6358 /* AppDelegate.swift */,
 				92758FD32116DAE9004B6358 /* ChecklistViewController.swift */,
 				92E35F0D21228B3D008963DD /* AllListsViewController.swift */,
+				92E35F112123D446008963DD /* ListDetailViewController.swift */,
 				92B1EC7F21192DD300CDB422 /* ChecklistItem.swift */,
 				92E35F0F2123BE63008963DD /* Checklist.swift */,
 				92758FD52116DAE9004B6358 /* Main.storyboard */,
@@ -148,6 +151,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				92758FD42116DAE9004B6358 /* ChecklistViewController.swift in Sources */,
+				92E35F122123D446008963DD /* ListDetailViewController.swift in Sources */,
 				92B1EC8021192DD300CDB422 /* ChecklistItem.swift in Sources */,
 				92E35F102123BE63008963DD /* Checklist.swift in Sources */,
 				92758FD22116DAE9004B6358 /* AppDelegate.swift in Sources */,
