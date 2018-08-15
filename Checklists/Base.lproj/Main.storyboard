@@ -25,7 +25,7 @@
             </objects>
             <point key="canvasLocation" x="-623" y="125"/>
         </scene>
-        <!--Checklists-->
+        <!--Name of the Checklist-->
         <scene sceneID="wCF-pl-ejh">
             <objects>
                 <tableViewController id="BHm-wT-oQp" customClass="ChecklistViewController" customModule="Checklists" customModuleProvider="target" sceneMemberID="viewController">
@@ -67,7 +67,7 @@
                             <outlet property="delegate" destination="BHm-wT-oQp" id="hts-6v-4rf"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Checklists" id="jva-5Q-xFg">
+                    <navigationItem key="navigationItem" title="Name of the Checklist" id="jva-5Q-xFg">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="jJU-st-tun">
                             <connections>
                                 <segue destination="73G-7I-WyR" kind="show" identifier="AddItem" id="qQL-GV-goJ"/>
@@ -87,26 +87,19 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="R1t-qP-nEi">
-                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="R1t-qP-nEi" id="W28-i1-wVQ">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                </tableViewCellContentView>
-                            </tableViewCell>
-                        </prototypes>
                         <connections>
                             <outlet property="dataSource" destination="x4j-hI-jG8" id="JYe-nC-Eoh"/>
                             <outlet property="delegate" destination="x4j-hI-jG8" id="XSe-RP-war"/>
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Checklists" id="4nt-lN-GlT"/>
+                    <connections>
+                        <segue destination="BHm-wT-oQp" kind="show" identifier="ShowChecklist" id="8ey-KT-aiR"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eAi-Em-7fI" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1937" y="842"/>
+            <point key="canvasLocation" x="1177" y="134"/>
         </scene>
         <!--Add Item-->
         <scene sceneID="3w6-5x-X50">
@@ -167,7 +160,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eYT-Xp-ZDz" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2645.5999999999999" y="133.5832083958021"/>
+            <point key="canvasLocation" x="2849" y="134"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="8kK-l8-Vuu">
@@ -185,10 +178,10 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jq5-gf-iRj" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="981.60000000000002" y="133.5832083958021"/>
+            <point key="canvasLocation" x="1614" y="-637"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="vUs-wk-WUX"/>
+        <segue reference="qQL-GV-goJ"/>
     </inferredMetricsTieBreakers>
 </document>
