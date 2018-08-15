@@ -15,6 +15,7 @@
 		929089B8211A940800C129BC /* ItemDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 929089B7211A940800C129BC /* ItemDetailViewController.swift */; };
 		92B1EC8021192DD300CDB422 /* ChecklistItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92B1EC7F21192DD300CDB422 /* ChecklistItem.swift */; };
 		92E35F0E21228B3D008963DD /* AllListsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92E35F0D21228B3D008963DD /* AllListsViewController.swift */; };
+		92E35F102123BE63008963DD /* Checklist.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92E35F0F2123BE63008963DD /* Checklist.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		929089B7211A940800C129BC /* ItemDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemDetailViewController.swift; sourceTree = "<group>"; };
 		92B1EC7F21192DD300CDB422 /* ChecklistItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChecklistItem.swift; sourceTree = "<group>"; };
 		92E35F0D21228B3D008963DD /* AllListsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllListsViewController.swift; sourceTree = "<group>"; };
+		92E35F0F2123BE63008963DD /* Checklist.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Checklist.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -44,6 +46,7 @@
 		92758FC52116DAE9004B6358 = {
 			isa = PBXGroup;
 			children = (
+				92E35F0F2123BE63008963DD /* Checklist.swift */,
 				92758FD02116DAE9004B6358 /* Checklists */,
 				92758FCF2116DAE9004B6358 /* Products */,
 			);
@@ -146,6 +149,7 @@
 			files = (
 				92758FD42116DAE9004B6358 /* ChecklistViewController.swift in Sources */,
 				92B1EC8021192DD300CDB422 /* ChecklistItem.swift in Sources */,
+				92E35F102123BE63008963DD /* Checklist.swift in Sources */,
 				92758FD22116DAE9004B6358 /* AppDelegate.swift in Sources */,
 				92E35F0E21228B3D008963DD /* AllListsViewController.swift in Sources */,
 				929089B8211A940800C129BC /* ItemDetailViewController.swift in Sources */,

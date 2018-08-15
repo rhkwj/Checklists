@@ -12,6 +12,9 @@ class AllListsViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        // Enable large titles
+        navigationController?.navigationBar.prefersLargeTitles = true
     }
     
     override func tableView(_ tableView: UITableView,
@@ -38,4 +41,8 @@ class AllListsViewController: UITableViewController {
         return cell
     }
     
+    override func tableView(_ tableView: UITableView,
+                            didSelectRowAt indexPath: IndexPath) {
+        performSegue(withIdentifier: "ShowChecklist", sender: nil)
+    }
 }

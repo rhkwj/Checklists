@@ -15,8 +15,10 @@ class ChecklistViewController: UITableViewController, ItemDetailViewControllerDe
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Enable large titles
-        navigationController?.navigationBar.prefersLargeTitles = true
+        
+        // Disable large titles for this view controller
+        navigationItem.largeTitleDisplayMode = .never
+    
         // Load items
         loadChecklistItems()
     }
