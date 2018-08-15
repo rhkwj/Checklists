@@ -46,7 +46,6 @@
 		92758FC52116DAE9004B6358 = {
 			isa = PBXGroup;
 			children = (
-				92E35F0F2123BE63008963DD /* Checklist.swift */,
 				92758FD02116DAE9004B6358 /* Checklists */,
 				92758FCF2116DAE9004B6358 /* Products */,
 			);
@@ -67,6 +66,7 @@
 				92758FD32116DAE9004B6358 /* ChecklistViewController.swift */,
 				92E35F0D21228B3D008963DD /* AllListsViewController.swift */,
 				92B1EC7F21192DD300CDB422 /* ChecklistItem.swift */,
+				92E35F0F2123BE63008963DD /* Checklist.swift */,
 				92758FD52116DAE9004B6358 /* Main.storyboard */,
 				92758FD82116DAF6004B6358 /* Assets.xcassets */,
 				92758FDA2116DAF6004B6358 /* LaunchScreen.storyboard */,

@@ -9,17 +9,32 @@
 import UIKit
 
 class AllListsViewController: UITableViewController {
+    
+    var lists = [Checklist]()
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
         // Enable large titles
         navigationController?.navigationBar.prefersLargeTitles = true
-    }
+
+    // Add placeholder data
+    var list = Checklist(name: "Birthdays")
+    lists.append(list)
+    
+    list = Checklist(name: "Groceries")
+    lists.append(list)
+    
+    list = Checklist(name: "Cool Apps")
+    lists.append(list)
+    
+    list = Checklist(name: "To Do")
+    lists.append(list)
+}
     
     override func tableView(_ tableView: UITableView,
                 numberOfRowsInSection section: Int) -> Int {
-            return 3
+            return lists.count
     }
     
     // MARK:- Private Methods
