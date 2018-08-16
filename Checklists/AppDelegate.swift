@@ -12,6 +12,14 @@ import UIKit
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
+    
+    func saveData() {
+        let navigationController = window!.rootViewController
+            as! UINavigationController
+        let controller = navigationController.viewControllers[0]
+            as! AllListsViewController
+        controller.saveChecklists()
+    }
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
