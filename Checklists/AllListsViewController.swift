@@ -16,17 +16,29 @@ class AllListsViewController: UITableViewController, ListDetailViewControllerDel
         // Enable large titles
         navigationController?.navigationBar.prefersLargeTitles = true
         // Add placeholder data
-        var list = Checklist(name: "Birthdays")
-        lists.append(list)
         
-        list = Checklist(name: "Groceries")
-        lists.append(list)
+        var item = ChecklistItem()
+        item.text = "Item for Birthdays"
+        lists[0].items.append(item)
         
-        list = Checklist(name: "Cool Apps")
-        lists.append(list)
+        item = ChecklistItem()
+        item.text = "Item for Groceries"
+        lists[1].items.append(item)
         
-        list = Checklist(name: "To Do")
-        lists.append(list)
+        item = ChecklistItem()
+        item.text = "Item for Cool Apps"
+        lists[2].items.append(item)
+        
+        item = ChecklistItem()
+        item.text = "Item for To Do"
+        lists[3].items.append(item)
+        
+        // Add placeholder item data
+        for list in lists {
+            let item = ChecklistItem()
+            item.text = "Item for \(list.name)"
+            list.items.append(item)
+        }
     }
     
     override func didReceiveMemoryWarning() {
