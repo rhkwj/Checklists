@@ -134,6 +134,7 @@
                     </navigationItem>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
+                        <outlet property="doneBarButton" destination="QdV-pf-ADY" id="5lM-Ge-AdV"/>
                         <outlet property="textField" destination="zEE-In-RFU" id="otg-HV-i3L"/>
                     </connections>
                 </tableViewController>
