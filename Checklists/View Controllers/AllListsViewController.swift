@@ -18,12 +18,17 @@ class AllListsViewController: UITableViewController, ListDetailViewControllerDel
     
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        tableView.reloadData()
+    }
+    
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         
         navigationController?.delegate = self
         
-        let index =  dataModel.indexOfSelectedChecklist // change this
+        let index = dataModel.indexOfSelectedChecklist // change this
         
         if index >= 0 && index < dataModel.lists.count {
 
