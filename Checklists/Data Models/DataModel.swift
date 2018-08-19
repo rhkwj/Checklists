@@ -72,5 +72,10 @@ class DataModel {
     userDefaults.synchronize()
     }
   }
+    func sortChecklists() {
+        lists.sort(by: { checklist1, checklist2 in
+            return checklist1.name.localizedStandardCompare(
+                checklist2.name) == .orderedAscending })
+    }
 }
 
