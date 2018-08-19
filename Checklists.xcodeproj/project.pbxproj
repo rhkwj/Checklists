@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		925E0B4221297472007C4093 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 925E0B4121297472007C4093 /* Info.plist */; };
 		92758FD22116DAE9004B6358 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92758FD12116DAE9004B6358 /* AppDelegate.swift */; };
 		92758FD42116DAE9004B6358 /* ChecklistViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92758FD32116DAE9004B6358 /* ChecklistViewController.swift */; };
 		92758FD72116DAE9004B6358 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 92758FD52116DAE9004B6358 /* Main.storyboard */; };
@@ -21,13 +22,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		925E0B4121297472007C4093 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = Checklists/Info.plist; sourceTree = "<group>"; };
 		92758FCE2116DAE9004B6358 /* Checklists.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Checklists.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		92758FD12116DAE9004B6358 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		92758FD32116DAE9004B6358 /* ChecklistViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChecklistViewController.swift; sourceTree = "<group>"; };
 		92758FD62116DAE9004B6358 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		92758FD82116DAF6004B6358 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		92758FDB2116DAF6004B6358 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		92758FDD2116DAF6004B6358 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		929089B7211A940800C129BC /* ItemDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemDetailViewController.swift; sourceTree = "<group>"; };
 		92A33493212654530081B2CB /* DataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataModel.swift; sourceTree = "<group>"; };
 		92B1EC7F21192DD300CDB422 /* ChecklistItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChecklistItem.swift; sourceTree = "<group>"; };
@@ -83,7 +84,7 @@
 			children = (
 				92758FD02116DAE9004B6358 /* Checklists */,
 				92758FD12116DAE9004B6358 /* AppDelegate.swift */,
-				92758FDD2116DAF6004B6358 /* Info.plist */,
+				925E0B4121297472007C4093 /* Info.plist */,
 				92758FCF2116DAE9004B6358 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -164,6 +165,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				925E0B4221297472007C4093 /* Info.plist in Resources */,
 				92758FDC2116DAF6004B6358 /* LaunchScreen.storyboard in Resources */,
 				92758FD92116DAF6004B6358 /* Assets.xcassets in Resources */,
 				92758FD72116DAE9004B6358 /* Main.storyboard in Resources */,
