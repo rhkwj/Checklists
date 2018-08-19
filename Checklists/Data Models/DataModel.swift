@@ -14,6 +14,7 @@ class DataModel {
     init() {
         loadChecklists()
         registerDefaults()
+        handleFirstTime()
     }
 
     func documentsDirectory() -> URL {

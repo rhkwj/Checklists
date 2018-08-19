@@ -47,10 +47,43 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		925E0B3621295FB8007C4093 /* Data Models */ = {
+			isa = PBXGroup;
+			children = (
+				92B1EC7F21192DD300CDB422 /* ChecklistItem.swift */,
+				92A33493212654530081B2CB /* DataModel.swift */,
+				92E35F0F2123BE63008963DD /* Checklist.swift */,
+			);
+			path = "Data Models";
+			sourceTree = "<group>";
+		};
+		925E0B3721295FC2007C4093 /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				92E35F0D21228B3D008963DD /* AllListsViewController.swift */,
+				92758FD32116DAE9004B6358 /* ChecklistViewController.swift */,
+				929089B7211A940800C129BC /* ItemDetailViewController.swift */,
+				92E35F112123D446008963DD /* ListDetailViewController.swift */,
+			);
+			path = "View Controllers";
+			sourceTree = "<group>";
+		};
+		925E0B3821295FD5007C4093 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				92758FD82116DAF6004B6358 /* Assets.xcassets */,
+				92758FD52116DAE9004B6358 /* Main.storyboard */,
+				92758FDA2116DAF6004B6358 /* LaunchScreen.storyboard */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
 		92758FC52116DAE9004B6358 = {
 			isa = PBXGroup;
 			children = (
 				92758FD02116DAE9004B6358 /* Checklists */,
+				92758FD12116DAE9004B6358 /* AppDelegate.swift */,
+				92758FDD2116DAF6004B6358 /* Info.plist */,
 				92758FCF2116DAE9004B6358 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -66,18 +99,9 @@
 		92758FD02116DAE9004B6358 /* Checklists */ = {
 			isa = PBXGroup;
 			children = (
-				92758FD12116DAE9004B6358 /* AppDelegate.swift */,
-				92A33493212654530081B2CB /* DataModel.swift */,
-				92758FD32116DAE9004B6358 /* ChecklistViewController.swift */,
-				92E35F0D21228B3D008963DD /* AllListsViewController.swift */,
-				92E35F112123D446008963DD /* ListDetailViewController.swift */,
-				92B1EC7F21192DD300CDB422 /* ChecklistItem.swift */,
-				92E35F0F2123BE63008963DD /* Checklist.swift */,
-				92758FD52116DAE9004B6358 /* Main.storyboard */,
-				92758FD82116DAF6004B6358 /* Assets.xcassets */,
-				92758FDA2116DAF6004B6358 /* LaunchScreen.storyboard */,
-				92758FDD2116DAF6004B6358 /* Info.plist */,
-				929089B7211A940800C129BC /* ItemDetailViewController.swift */,
+				925E0B3621295FB8007C4093 /* Data Models */,
+				925E0B3721295FC2007C4093 /* View Controllers */,
+				925E0B3821295FD5007C4093 /* Resources */,
 			);
 			path = Checklists;
 			sourceTree = "<group>";
