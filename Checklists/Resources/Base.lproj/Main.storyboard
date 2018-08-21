@@ -322,4 +322,5 @@
         <segue reference="vUs-wk-WUX"/>
         <segue reference="SfH-yK-jcM"/>
     </inferredMetricsTieBreakers>
+    <color key="tintColor" red="0.015686274509803921" green="0.66274509803921566" blue="1" alpha="1" colorSpace="calibratedRGB"/>
 </document>
