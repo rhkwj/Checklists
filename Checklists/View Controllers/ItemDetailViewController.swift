@@ -21,6 +21,8 @@ class ItemDetailViewController: UITableViewController, UITextFieldDelegate {
     
     var itemToEdit: ChecklistItem?
     
+    var dueDate = Date()
+    
     @IBOutlet weak var textField: UITextField!
     
     @IBOutlet weak var doneBarButton: UIBarButtonItem!
@@ -37,15 +39,28 @@ class ItemDetailViewController: UITableViewController, UITextFieldDelegate {
         if let itemToEdit = itemToEdit {
             title = "Edit Item"
             itemToEdit.text = textField.text!
+            item.shouldRemind = shouldRemindSwitch.isOn
+            item.dueDate = dueDate
             delegate?.itemDetailViewController(self,
                                             didFinishEditing: itemToEdit)
         } else {
             let item = ChecklistItem()
             item.text = textField.text!
             item.checked = false
+            
+            item.shouldRemind = shouldRemindSwitch.isOn  
+            item.dueDate = dueDate
+            
             delegate?.itemDetailViewController(self, didFinishAdding: item)
         }
-        
+    }
+    
+    // MARK:- Prviate Methods
+    func updateDueDateLabel() {
+        let formatter = DateFormatter()
+        formatter.dateStyle = .medium
+        formatter.timeStyle = .short
+        dueDateLabel.text = formatter.string(from: dueDate)
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -65,7 +80,10 @@ class ItemDetailViewController: UITableViewController, UITextFieldDelegate {
             title = "Edit Item"
             textField.text = item.text
             doneBarButton.isEnabled = true
+            shouldRemindSwitch.isOn = item.shouldRemind
+            dueDate = item.dueDate
         }
+        updateDueDateLabel()
     }
 
     func textField(_ textField: UITextField,
