@@ -17,6 +17,8 @@ protocol ItemDetailViewControllerDelegate: class {
     func itemDetailViewController(_ controller: ItemDetailViewController, didFinishEditing item: ChecklistItem)
 }
 
+
+
 class ItemDetailViewController: UITableViewController, UITextFieldDelegate {
     
     weak var delegate: ItemDetailViewControllerDelegate?
@@ -36,12 +38,28 @@ class ItemDetailViewController: UITableViewController, UITextFieldDelegate {
         delegate?.itemDetailViewControllerDidCancel(self)
     }
     
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        // Disable large titles for this view controller
+        navigationItem.largeTitleDisplayMode = .never
+        if let item = itemToEdit {
+            title = "Edit Item"
+            textField.text = item.text
+            doneBarButton.isEnabled = true
+            shouldRemindSwitch.isOn = item.shouldRemind
+            dueDate = item.dueDate
+        }
+        updateDueDateLabel()
+    }
+    
+    
     @IBAction func done() {
         if let itemToEdit = itemToEdit {
-            title = "Edit Item"
             itemToEdit.text = textField.text!
+            
             item.shouldRemind = shouldRemindSwitch.isOn
             item.dueDate = dueDate
+            
             delegate?.itemDetailViewController(self,
                                             didFinishEditing: itemToEdit)
         } else {
@@ -74,19 +92,7 @@ class ItemDetailViewController: UITableViewController, UITextFieldDelegate {
         return nil
     }
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        navigationItem.largeTitleDisplayMode = .never
-        if let item = itemToEdit {
-            title = "Edit Item"
-            textField.text = item.text
-            doneBarButton.isEnabled = true
-            shouldRemindSwitch.isOn = item.shouldRemind
-            dueDate = item.dueDate
-        }
-        updateDueDateLabel()
-    }
-
+   
     func textField(_ textField: UITextField,
                    shouldChangeCharactersIn range: NSRange,
                    replacementString string: String) -> Bool {
