@@ -42,7 +42,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate,UNUserNotificationCenterDe
             repeats: false)
         let request = UNNotificationRequest(identifier: "MyNotification", content: content, trigger: trigger)
             center.add(request)
-        
+        center.delegate = self
         return true
     }
     
@@ -55,6 +55,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate,UNUserNotificationCenterDe
 
     func applicationDidEnterBackground(_ application: UIApplication) {
         saveData()
+    }
+    
+    // MARK:- User Notification Delegates
+    func userNotificationCenter(_ center: UNUserNotificationCenter, willPresent notification: UNNotification, withCompletionHandler completionHandler: @escaping (UNNotificationPresentationOptions) -> Void) {
+        print("Received local notification \(notification)")
     }
 
     func applicationWillEnterForeground(_ application: UIApplication) {
