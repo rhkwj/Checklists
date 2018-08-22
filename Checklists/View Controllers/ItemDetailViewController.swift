@@ -25,6 +25,10 @@ class ItemDetailViewController: UITableViewController, UITextFieldDelegate {
     
     @IBOutlet weak var doneBarButton: UIBarButtonItem!
     
+    @IBOutlet weak var shouldRemindSwitch: UISwitch!
+    
+    @IBOutlet weak var dueDateLabel: UILabel!
+    
     @IBAction func cancel() {
         delegate?.itemDetailViewControllerDidCancel(self)
     }
