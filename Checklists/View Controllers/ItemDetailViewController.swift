@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import UserNotifications
+
 
 // page 289
 protocol ItemDetailViewControllerDelegate: class {
@@ -18,10 +20,9 @@ protocol ItemDetailViewControllerDelegate: class {
 class ItemDetailViewController: UITableViewController, UITextFieldDelegate {
     
     weak var delegate: ItemDetailViewControllerDelegate?
-    
     var itemToEdit: ChecklistItem?
-    
     var dueDate = Date()
+    var datePickerVisible = false
     
     @IBOutlet weak var textField: UITextField!
     
@@ -48,7 +49,7 @@ class ItemDetailViewController: UITableViewController, UITextFieldDelegate {
             item.text = textField.text!
             item.checked = false
             
-            item.shouldRemind = shouldRemindSwitch.isOn  
+            item.shouldRemind = shouldRemindSwitch.isOn
             item.dueDate = dueDate
             
             delegate?.itemDetailViewController(self, didFinishAdding: item)

@@ -12,7 +12,7 @@ class ChecklistItem: NSObject, Codable {
     var text = ""
     var checked = false
     var iconName = "Appointments"
-    var dueData = Data()
+    var dueDate = Date()
     var shouldRemind = false
     var itemID: Int
     
