@@ -82,6 +82,12 @@ class ItemDetailViewController: UITableViewController, UITextFieldDelegate {
         dueDateLabel.text = formatter.string(from: dueDate)
     }
     
+    func showDatePicker() {
+        datePickerVisible = true
+        let indexPathDatePicker = IndexPath(row: 2, section: 1)
+        tableView.insertRows(at: [indexPathDatePicker], with: .fade)
+    }
+    
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         textField.becomeFirstResponder()
