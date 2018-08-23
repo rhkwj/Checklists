@@ -32,6 +32,10 @@ class ItemDetailViewController: UITableViewController, UITextFieldDelegate {
     
     @IBOutlet weak var shouldRemindSwitch: UISwitch!
     
+    @IBOutlet weak var datePickerCell: UITableViewCell!
+    
+    @IBOutlet weak var datePicker: UIDatePicker!
+    
     @IBOutlet weak var dueDateLabel: UILabel!
     
     @IBAction func cancel() {
