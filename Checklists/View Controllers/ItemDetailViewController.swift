@@ -52,6 +52,8 @@ class ItemDetailViewController: UITableViewController, UITextFieldDelegate {
             doneBarButton.isEnabled = true
             shouldRemindSwitch.isOn = item.shouldRemind
             dueDate = item.dueDate
+            item.scheduleNotification()
+
         }
 //        updateDueDateLabel()
     }
@@ -63,6 +65,8 @@ class ItemDetailViewController: UITableViewController, UITextFieldDelegate {
             
             item.shouldRemind = shouldRemindSwitch.isOn
             item.dueDate = dueDate
+            item.scheduleNotification()
+
             
             delegate?.itemDetailViewController(self, didFinishAdding: item)
             
