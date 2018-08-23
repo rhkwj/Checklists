@@ -330,7 +330,7 @@
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Detail" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="e4m-UX-b5M" userLabel="Dut Data Label">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Detail" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="e4m-UX-b5M" userLabel="Due Data Label">
                                                     <rect key="frame" x="317" y="10" width="42" height="20"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="16"/>
@@ -364,6 +364,7 @@
                         <outlet property="datePicker" destination="gWd-gu-OBT" id="Gij-0Q-WIw"/>
                         <outlet property="datePickerCell" destination="9Fb-Y6-J5W" id="R5W-n9-X9o"/>
                         <outlet property="doneBarButton" destination="nfK-IF-D2X" id="yGv-C8-jhr"/>
+                        <outlet property="shouldRemindSwitch" destination="a6I-NY-vN7" id="O6L-wJ-cpM"/>
                         <outlet property="textField" destination="kSn-TI-0hx" id="9fr-Gg-WFz"/>
                     </connections>
                 </tableViewController>
