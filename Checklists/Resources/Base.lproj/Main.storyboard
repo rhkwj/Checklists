@@ -367,6 +367,7 @@
                         <outlet property="datePicker" destination="gWd-gu-OBT" id="Gij-0Q-WIw"/>
                         <outlet property="datePickerCell" destination="9Fb-Y6-J5W" id="R5W-n9-X9o"/>
                         <outlet property="doneBarButton" destination="nfK-IF-D2X" id="yGv-C8-jhr"/>
+                        <outlet property="dueDateLabel" destination="NMd-mN-ad6" id="UrM-KV-zGQ"/>
                         <outlet property="shouldRemindSwitch" destination="a6I-NY-vN7" id="O6L-wJ-cpM"/>
                         <outlet property="textField" destination="kSn-TI-0hx" id="9fr-Gg-WFz"/>
                     </connections>
@@ -384,6 +385,9 @@
                                 <date key="date" timeIntervalSinceReferenceDate="556679331.47425103">
                                     <!--2018-08-23 01:08:51 +0000-->
                                 </date>
+                                <connections>
+                                    <action selector="dateChanged:" destination="73G-7I-WyR" eventType="valueChanged" id="Ae5-sF-yU1"/>
+                                </connections>
                             </datePicker>
                         </subviews>
                         <constraints>
