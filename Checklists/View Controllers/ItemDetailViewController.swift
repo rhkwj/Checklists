@@ -117,14 +117,22 @@ class ItemDetailViewController: UITableViewController, UITextFieldDelegate {
                                indentationLevelForRowAt: newIndexPath)
     }
     
+    func textFieldDidBeginEditing(_ textField: UITextField) {
+        hideDatePicker()
+    }
+    
     override func tableView(_ tableView: UITableView,
                             didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
         textField.resignFirstResponder()
         if indexPath.section == 1 && indexPath.row == 1 {
-            showDatePicker()
+            if !datePickerVisible {
+                showDatePicker()
+            } else {
+                hideDatePicker()
         }
     }
+  }
     
     // MARK:- Prviate Methods
     func updateDueDateLabel() {
@@ -154,6 +162,21 @@ class ItemDetailViewController: UITableViewController, UITextFieldDelegate {
         tableView.endUpdates()
         datePicker.setDate(dueDate, animated: false)
 
+    }
+    
+    func hideDatePicker() {
+        if datePickerVisible {
+            datePickerVisible = false
+            let indexPathDateRow = IndexPath(row: 1, section: 1)
+            let indexPathDatePicker = IndexPath(row: 2, section: 1)
+            if let cell = tableView.cellForRow(at: indexPathDateRow) {
+                cell.detailTextLabel!.textColor = UIColor.black
+            }
+            tableView.beginUpdates()
+            tableView.reloadRows(at: [indexPathDateRow], with: .none)
+            tableView.deleteRows(at: [indexPathDatePicker], with: .fade)
+            tableView.endUpdates()
+        }
     }
     
     override func viewWillAppear(_ animated: Bool) {
