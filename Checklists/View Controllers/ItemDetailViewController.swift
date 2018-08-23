@@ -134,10 +134,17 @@ class ItemDetailViewController: UITableViewController, UITextFieldDelegate {
         dueDateLabel.text = formatter.string(from: dueDate)
     }
     
+    @IBAction func dateChanged(_ datePicker: UIDatePicker) {
+        dueDate = datePicker.date
+        updateDueDateLabel()
+    }
+    
     func showDatePicker() {
         datePickerVisible = true
         let indexPathDatePicker = IndexPath(row: 2, section: 1)
         tableView.insertRows(at: [indexPathDatePicker], with: .fade)
+        datePicker.setDate(dueDate, animated: false)
+
     }
     
     override func viewWillAppear(_ animated: Bool) {
