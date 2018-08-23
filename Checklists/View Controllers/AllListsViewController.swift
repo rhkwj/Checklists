@@ -120,7 +120,6 @@ class AllListsViewController: UITableViewController, ListDetailViewControllerDel
     }
     
     func listDetailViewController(_ controller: ListDetailViewController, didFinishAdding checklist: Checklist) {
-        let newRowIndex = dataModel.lists.count
         dataModel.lists.append(checklist)
         dataModel.sortChecklists()
         tableView.reloadData()
@@ -128,7 +127,6 @@ class AllListsViewController: UITableViewController, ListDetailViewControllerDel
     }
     
     func listDetailViewController(_ controller: ListDetailViewController, didFinishEditing checklist: Checklist) {
-        dataModel.lists.append(checklist)
         dataModel.sortChecklists()
         tableView.reloadData()
         navigationController?.popViewController(animated: true)
